@@ -8,7 +8,7 @@ export async function newStorageTrace(
   page: puppeteer.Page,
   type: types.StorageType
 ): Promise<types.Trace> {
-  await page.evaluateOnNewDocument(initLocalStorageTrace, type)
+  await page.evaluateOnNewDocument(initStorageTrace, type)
   return {
     initialState: () =>
       selectObject(page, type => window.tracing[type].initialState, type),
@@ -31,7 +31,7 @@ async function selectObject<P, R>(
   )
 }
 
-function initLocalStorageTrace(type: types.StorageType): void {
+function initStorageTrace(type: types.StorageType): void {
   if (!window.tracing) {
     window.tracing = {} as types.WindowTracing
   }

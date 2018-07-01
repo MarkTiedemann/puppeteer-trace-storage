@@ -1,7 +1,7 @@
 {
   "name": "puppeteer-trace-storage",
   "description": "Trace `localStorage` and `sessionStorage` in `puppeteer`.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Mark Tiedemann <www.marktiedemann@gmail.com>",
   "license": "MIT",
   "main": "build/index.js",
